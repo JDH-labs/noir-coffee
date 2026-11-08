@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Демонстрационный сайт вымышленной specialty-кофейни NOIR COFFEE в Самаре.">
+  <meta name="theme-color" content="#0c0a09">
+  <title>NOIR-COFFEE — кофе, атмосфера, тишина</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect fill='%230c0a09' width='32' height='32'/%3E%3Ccircle cx='16' cy='16' r='7' fill='none' stroke='%23c4a27a' stroke-width='1.5'/%3E%3Ccircle cx='16' cy='16' r='2' fill='%23c4a27a'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Prata&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">К содержанию</a>
+
+  <header class="header">
+    <div class="wrap header__inner">
+      <a class="logo" href="#top" aria-label="NOIR COFFEE, на главную">
+        <span class="logo__mark" aria-hidden="true"></span>
+        <span class="logo__words">
+          <span class="logo__name">NOIR<span class="logo__dash">—</span></span>
+          <span class="logo__sub">Coffee</span>
+        </span>
+      </a>
+
+      <nav id="site-nav" class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li><a href="#top">Главная</a></li>
+          <li><a href="#menu">Меню</a></li>
+          <li><a href="#about">О кофейне</a></li>
+          <li><a href="#contacts">Контакты</a></li>
+        </ul>
+        <p class="site-nav__foot">Самара, ул. Куйбышева, 88<br>Демонстрационный адрес</p>
+      </nav>
+
+      <a class="btn btn--small" href="#contacts">Найти нас</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Меню">
+        <span class="nav-toggle__box" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <button class="nav-backdrop" type="button" aria-label="Закрыть меню" tabindex="-1" aria-hidden="true"></button>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="wrap hero__main">
+        <div class="hero__copy">
+          <p class="eyebrow">01 — Самара · specialty</p>
+          <h1 class="hero__title">
+            <span>Кофе<span class="dot">.</span></span>
+            <span>Атмосфера<span class="dot">.</span></span>
+            <span>Тишина<span class="dot">.</span></span>
+          </h1>
+          <p class="lede">
+            Небольшая кофейня на Куйбышева. Обжариваем зерно короткими партиями,
+            варим без спешки и оставляем зал приглушённым — чтобы на первом плане
+            были чашка, книга или разговор.
+          </p>
+          <a class="btn" href="#menu">Смотреть меню</a>
+        </div>
+
+        <div class="hero__visual">
+          <div class="hero__frame" data-frame>
+            <img
+              src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&amp;fit=crop&amp;w=1400&amp;q=75"
+              alt="Интерьер кофейни: стойка, чашки и тёплый свет"
+              width="1400"
+              height="1750"
+              fetchpriority="high"
+              decoding="async">
+          </div>
+          <p class="hero__note"><span>Стойка</span><span>приглушённый свет</span></p>
+        </div>
+      </div>
+
+      <div class="wrap">
+        <ul class="facts">
+          <li><strong>12</strong><span>сортов в сезоне</span></li>
+          <li><strong>28</strong><span>мест в зале</span></li>
+          <li><strong>92°</strong><span>вода для фильтра</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="menu" aria-labelledby="menu-title">
+      <div class="wrap menu__layout">
+        <div class="menu__intro reveal">
+          <p class="eyebrow">02 — Меню</p>
+          <h2 id="menu-title">Наше меню</h2>
+          <p>
+            В эспрессо — сезонная смесь. Фильтр меняем раз в неделю.
+            Десерты печём утром, к вечеру их часто уже нет.
+          </p>
+          <div class="filters" role="group" aria-label="Разделы меню">
+            <button class="filter is-active" type="button" data-filter="all" aria-pressed="true">Всё</button>
+            <button class="filter" type="button" data-filter="coffee" aria-pressed="false">Напитки</button>
+            <button class="filter" type="button" data-filter="dessert" aria-pressed="false">Десерты</button>
+          </div>
+          <p class="menu__note">Цены указаны для демонстрации и ни к чему не обязывают.</p>
+        </div>
+
+        <div class="menu__list">
+          <article class="card" data-kind="coffee">
+            <div class="card__media" data-frame>
+              <img src="https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?auto=format&amp;fit=crop&amp;w=800&amp;q=75" alt="Чашка эспрессо с плотной крема" width="800" height="800" loading="lazy" decoding="async">
+            </div>
+            <div class="card__body">
+              <p class="card__meta">Кофе</p>
+              <div class="card__top">
+                <h3>Эспрессо</h3>
+                <p class="price">190 ₽</p>
+              </div>
+              <p>Двойная порция сезонной смеси. Тёмный шоколад, сушёная вишня, короткое послевкусие.</p>
+            </div>
+          </article>
+
+          <article class="card" data-kind="coffee">
+            <div class="card__media" data-frame>
+              <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&amp;fit=crop&amp;w=800&amp;q=75" alt="Чёрный кофе в белой чашке" width="800" height="800" loading="lazy" decoding="async">
+            </div>
+            <div class="card__body">
+              <p class="card__meta">Кофе</p>
+              <div class="card__top">
+                <h3>Американо</h3>
+                <p class="price">230 ₽</p>
+              </div>
+              <p>Тот же эспрессо и горячая вода. Легче тело, характер зерна остаётся.</p>
+            </div>
+          </article>
+
+          <article class="card" data-kind="coffee">
+            <div class="card__media" data-frame>
+              <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&amp;fit=crop&amp;w=800&amp;q=75" alt="Капучино с плотной молочной пенкой" width="800" height="800" loading="lazy" decoding="async">
+            </div>
+            <div class="card__body">
+              <p class="card__meta">Кофе</p>
+              <div class="card__top">
+                <h3>Капучино</h3>
+                <p class="price">290 ₽</p>
+              </div>
+              <p>Эспрессо, молоко и плотная пена в равных долях. Без сиропа и посыпки.</p>
+            </div>
+          </article>
+
+          <article class="card" data-kind="coffee">
+            <div class="card__media" data-frame>
+              <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&amp;fit=crop&amp;w=800&amp;q=75" alt="Латте в высоком стакане" width="800" height="800" loading="lazy" decoding="async">
+            </div>
+            <div class="card__body">
+              <p class="card__meta">Кофе</p>
+              <div class="card__top">
+                <h3>Латте</h3>
+                <p class="price">320 ₽</p>
+              </div>
+              <p>Больше молока и мягче вкус. Подаём в керамике на 250 мл.</p>
+            </div>
+          </article>
+
+          <article class="card" data-kind="coffee">
+            <div class="card__media" data-frame>
+              <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&amp;fit=crop&amp;w=800&amp;q=75" alt="Молочный кофейный напиток с пенкой" width="800" height="800" loading="lazy" decoding="async">
+            </div>
+            <div class="card__body">
+              <p class="card__meta">Кофе</p>
+              <div class="card__top">
+                <h3>Раф</h3>
+                <p class="price">350 ₽</p>
+              </div>
+              <p>Эспрессо, сливки 22% и стручок ванили, взбитые паром. Сладкий и плотный.</p>
+            </div>
+          </article>
+
+          <article class="card" data-kind="coffee">
+            <div class="card__media" data-frame>
+              <img src="https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&amp;fit=crop&amp;w=800&amp;q=75" alt="Фильтр-кофе, который заваривают в воронке" width="800" height="800" loading="lazy" decoding="async">
+            </div>
+            <div class="card__body">
+              <p class="card__meta">Кофе <span class="badge">авторский</span></p>
+              <div class="card__top">
+                <h3>Фильтр «Ночной сад»</h3>
+                <p class="price">370 ₽</p>
+              </div>
+              <p>Эфиопия, мытая обработка. Бергамот, белый чай и спелая слива. Воронка V60.</p>
+            </div>
+          </article>
+
+          <article class="card" data-kind="coffee">
+            <div class="card__media" data-frame>
+              <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&amp;fit=crop&amp;w=800&amp;q=75" alt="Холодный кофейный напиток со льдом" width="800" height="800" loading="lazy" decoding="async">
+            </div>
+            <div class="card__body">
+              <p class="card__meta">Кофе <span class="badge">авторский</span></p>
+              <div class="card__top">
+                <h3>Тоник «Чёрный лес»</h3>
+                <p class="price">390 ₽</p>
+              </div>
+              <p>Двойной эспрессо, холодный тоник и тёртая цедра какао. Горький и цитрусовый.</p>
+            </div>
+          </article>
+
+          <article class="card card--featured" data-kind="dessert" id="dessert-of-the-day">
+            <div class="card__media" data-frame>
+              <img src="https://images.unsplash.com/photo-1533134486753-c833f0ed4866?auto=format&amp;fit=crop&amp;w=800&amp;q=75" alt="Кусок чизкейка на тёмной тарелке" width="800" height="800" loading="lazy" decoding="async">
+            </div>
+            <div class="card__body">
+              <p class="card__meta">Десерт <span class="badge">Десерт дня</span></p>
+              <div class="card__top">
+                <h3>Баскский чизкейк</h3>
+                <p class="price">430 ₽</p>
+              </div>
+              <p>Жжёная корочка и сливочная середина. Подаём чуть тёплым, без соуса.</p>
+            </div>
+          </article>
+
+          <article class="card" data-kind="dessert">
+            <div class="card__media" data-frame>
+              <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&amp;fit=crop&amp;w=800&amp;q=75" alt="Шоколадный брауни, нарезанный квадратами" width="800" height="800" loading="lazy" decoding="async">
+            </div>
+            <div class="card__body">
+              <p class="card__meta">Десерт</p>
+              <div class="card__top">
+                <h3>Брауни</h3>
+                <p class="price">310 ₽</p>
+              </div>
+              <p>70% какао, влажная середина и хлопья морской соли сверху.</p>
+            </div>
+          </article>
+
+          <article class="card" data-kind="dessert">
+            <div class="card__media" data-frame>
+              <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&amp;fit=crop&amp;w=800&amp;q=75" alt="Круассаны на деревянной доске" width="800" height="800" loading="lazy" decoding="async">
+            </div>
+            <div class="card__body">
+              <p class="card__meta">Десерт</p>
+              <div class="card__top">
+                <h3>Миндальный круассан</h3>
+                <p class="price">270 ₽</p>
+              </div>
+              <p>Слоеное тесто и паста франжипан. Печём каждое утро до одиннадцати.</p>
+            </div>
+          </article>
+
+          <article class="card" data-kind="dessert">
+            <div class="card__media" data-frame>
+              <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&amp;fit=crop&amp;w=800&amp;q=75" alt="Ягодный десерт со сливками" width="800" height="800" loading="lazy" decoding="async">
+            </div>
+            <div class="card__body">
+              <p class="card__meta">Десерт</p>
+              <div class="card__top">
+                <h3>Ягодный тарт</h3>
+                <p class="price">360 ₽</p>
+              </div>
+              <p>Песочная основа, заварной крем и свежие ягоды. Порция на одного.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="quote" aria-label="О зале">
+      <div class="wrap">
+        <p class="eyebrow">Между чашками</p>
+        <p class="quote__text">Мы не просим говорить тише. К вечеру зал сам становится тихим.</p>
+      </div>
+    </section>
+
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="wrap about__grid">
+        <figure class="about__visual reveal" data-frame>
+          <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&amp;fit=crop&amp;w=1200&amp;q=75" alt="Кофе на деревянном столе в мягком свете кофейни" width="1200" height="900" loading="lazy" decoding="async">
+          <figcaption>Место для своей паузы</figcaption>
+        </figure>
+
+        <div class="about__copy reveal" style="--d: 100ms">
+          <p class="eyebrow">03 — О кофейне</p>
+          <h2 id="about-title">Пространство для паузы</h2>
+          <p>NOIR-COFFEE — небольшая городская кофейня для тех, кому важны хороший кофе и время без спешки. Мы выбираем зерно небольшими партиями, настраиваем эспрессо каждый день и завариваем фильтр так, чтобы у каждого сорта оставался свой характер.</p>
+          <p>Здесь можно начать утро у окна, встретиться с друзьями или просто ненадолго выключить шум города. Без сложных правил — только внимательный кофе, свежая выпечка и тёплый свет.</p>
+
+          <dl class="about__details">
+            <div>
+              <dt>Зерно</dt>
+              <dd>Сезонная обжарка</dd>
+            </div>
+            <div>
+              <dt>На стойке</dt>
+              <dd>Эспрессо и фильтр</dd>
+            </div>
+            <div>
+              <dt>К каждому утру</dt>
+              <dd>Свежая выпечка</dd>
+            </div>
+          </dl>
+          <a class="text-link" href="#gallery">Заглянуть внутрь <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="gallery" aria-labelledby="gallery-title">
+      <div class="wrap">
+        <header class="section__head reveal">
+          <p class="eyebrow">04 — Галерея</p>
+          <h2 id="gallery-title">Место, куда хочется возвращаться</h2>
+          <p>Тёмный зал, деревянная стойка и свет там, где стоит чашка.</p>
+        </header>
+
+        <div class="gallery__grid">
+          <figure class="shot reveal" data-frame style="--d: 0ms">
+            <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&amp;fit=crop&amp;w=1200&amp;q=75" alt="Зал кофейни с большими окнами и посадочными местами" width="1200" height="1600" loading="lazy" decoding="async">
+            <figcaption><button class="gallery-action" type="button" data-action="about">Место у окна <span aria-hidden="true">→</span></button></figcaption>
+          </figure>
+          <figure class="shot reveal" data-frame style="--d: 70ms">
+            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&amp;fit=crop&amp;w=1200&amp;q=75" alt="Капучино с рисунком на молочной пенке" width="1200" height="900" loading="lazy" decoding="async">
+            <figcaption><button class="gallery-action" type="button" data-action="morning-offer" aria-haspopup="dialog" aria-controls="morning-offer">Утренняя чашка <span aria-hidden="true">↗</span></button></figcaption>
+          </figure>
+          <figure class="shot reveal" data-frame style="--d: 110ms">
+            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&amp;fit=crop&amp;w=1000&amp;q=75" alt="Чашка кофе на тёмном столе, вид сверху" width="1000" height="1000" loading="lazy" decoding="async">
+            <figcaption>Чёрный кофе</figcaption>
+          </figure>
+          <figure class="shot reveal" data-frame style="--d: 40ms">
+            <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&amp;fit=crop&amp;w=1000&amp;q=75" alt="Обжаренные кофейные зёрна крупным планом" width="1000" height="1000" loading="lazy" decoding="async">
+            <figcaption>Зёрна недели</figcaption>
+          </figure>
+          <figure class="shot reveal" data-frame style="--d: 80ms">
+            <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&amp;fit=crop&amp;w=1400&amp;q=75" alt="Бариста готовит кофе на эспрессо-машине" width="1400" height="900" loading="lazy" decoding="async">
+            <figcaption>Стойка бариста</figcaption>
+          </figure>
+          <figure class="shot reveal" data-frame style="--d: 120ms">
+            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&amp;fit=crop&amp;w=1000&amp;q=75" alt="Шоколадный торт, посыпанный какао" width="1000" height="1000" loading="lazy" decoding="async">
+            <figcaption><button class="gallery-action" type="button" data-action="dessert">Десерт дня <span aria-hidden="true">→</span></button></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <dialog class="offer-dialog" id="morning-offer" aria-labelledby="morning-offer-title" aria-describedby="morning-offer-description">
+      <div class="offer-dialog__inner">
+        <p class="eyebrow">Предложение утра · до 12:00</p>
+        <h2 id="morning-offer-title">Начать не спеша</h2>
+        <p id="morning-offer-description">Любой капучино и свежеиспечённый миндальный круассан — за 490 ₽. Можно взять столик у окна или захватить завтрак с собой.</p>
+        <p class="offer-dialog__note">Специальное предложение демонстрационное — кофейня вымышленная.</p>
+        <button class="btn offer-dialog__close" type="button" data-action="close-offer">Понятно</button>
+      </div>
+    </dialog>
+
+    <section class="section section--contacts" id="contacts" aria-labelledby="contacts-title">
+      <div class="wrap contacts__grid">
+        <div class="reveal">
+          <p class="eyebrow">05 — Контакты</p>
+          <h2 id="contacts-title">Самара</h2>
+          <address class="contacts__street">ул. Куйбышева, 88</address>
+          <p class="demo-note">Демонстрационный адрес. Кофейня вымышлена: заведения NOIR COFFEE по этому адресу нет.</p>
+          <div class="contacts__actions">
+            <a class="btn" href="tel:+78462001408">Позвонить</a>
+            <a class="btn btn--ghost" href="mailto:hello@noircoffee.demo">Написать</a>
+            <a class="btn btn--ghost" href="https://yandex.ru/maps/?text=%D0%A1%D0%B0%D0%BC%D0%B0%D1%80%D0%B0%2C%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%20%D0%9A%D1%83%D0%B9%D0%B1%D1%8B%D1%88%D0%B5%D0%B2%D0%B0%2C%2088" target="_blank" rel="noopener noreferrer">Маршрут</a>
+          </div>
+        </div>
+
+        <aside class="panel reveal" style="--d: 90ms" aria-label="Часы и связь">
+          <p class="status" id="open-status">
+            <span class="status__dot" aria-hidden="true"></span>
+            <span id="open-status-text">Часы работы — по самарскому времени</span>
+          </p>
+          <dl class="hours">
+            <div>
+              <dt>Понедельник — пятница</dt>
+              <dd>08:00–22:00</dd>
+            </div>
+            <div>
+              <dt>Суббота и воскресенье</dt>
+              <dd>09:00–23:00</dd>
+            </div>
+          </dl>
+          <ul class="contact-lines">
+            <li>
+              <span>Телефон</span>
+              <a href="tel:+78462001408">+7 (846) 200-14-08</a>
+              <small>Демонстрационный номер</small>
+            </li>
+            <li>
+              <span>Почта</span>
+              <a href="mailto:hello@noircoffee.demo">hello@noircoffee.demo</a>
+              <small>Письмо откроется в почтовой программе</small>
+            </li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer__top">
+        <a class="logo" href="#top" aria-label="NOIR COFFEE, на главную">
+          <span class="logo__mark" aria-hidden="true"></span>
+          <span class="logo__words">
+            <span class="logo__name">NOIR</span>
+            <span class="logo__sub">Coffee</span>
+          </span>
+        </a>
+
+        <nav aria-label="Навигация в подвале">
+          <ul class="footer__nav">
+            <li><a href="#top">Главная</a></li>
+            <li><a href="#menu">Меню</a></li>
+            <li><a href="#about">О кофейне</a></li>
+            <li><a href="#gallery">Галерея</a></li>
+            <li><a href="#contacts">Контакты</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer__contacts">
+          <p>Самара, ул. Куйбышева, 88</p>
+          <p>Демонстрационный адрес</p>
+          <p><a href="tel:+78462001408">+7 (846) 200-14-08</a></p>
+          <p>Ежедневно, с утра до позднего вечера</p>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© <span id="year">2026</span> NOIR COFFEE</p>
+        <p>Демонстрационный сайт вымышленной кофейни</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
